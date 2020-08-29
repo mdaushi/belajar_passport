@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->group(function(){
+    Route::post('artikel', 'api\ArtikelController@post');
+    Route::get('artikel', 'api\ArtikelController@get');
+    Route::put('artikel/{id}', 'api\ArtikelController@put');
+    Route::delete('artikel/{id}', 'api\ArtikelController@delete') ;
+
+    Route::post('kategori', 'api\KategoriController@post');
+    Route::get('kategori', 'api\KategoriController@get');
     
 
 });
